@@ -38,21 +38,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="collision.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../2017-2DGP/Labs/Lab09 - Collision Handling/collision.py">
+      <file leaf-file-name="boy.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../2017-2DGP/Labs/Lab09 - Collision Handling/boy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="25" column="8" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+            <state relative-caret-position="435">
+              <caret line="72" column="20" lean-forward="false" selection-start-line="72" selection-start-column="20" selection-end-line="72" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Difficulty_normal.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="collision.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../2017-2DGP/Labs/Lab09 - Collision Handling/collision.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1121">
+              <caret line="66" column="17" lean-forward="true" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Difficulty_normal.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Difficulty_normal.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-76">
-              <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+            <state relative-caret-position="342">
+              <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -70,40 +80,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageDrawTester.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ImageDrawTester.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ImageDrawTester.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="463">
-              <caret line="48" column="18" lean-forward="true" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
-              <folding />
+            <state relative-caret-position="323">
+              <caret line="23" column="35" lean-forward="true" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyGame_CupidzArrow.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MyGame_CupidzArrow.py">
+      <file leaf-file-name="Background.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Background.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+            <state relative-caret-position="285">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameFramework.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GameFramework.py">
+      <file leaf-file-name="get_frame_time_rate.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../2017-2DGP/Labs/Lab08 - Time/get_frame_time_rate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
-              <caret line="109" column="26" lean-forward="true" selection-start-line="109" selection-start-column="26" selection-end-line="109" selection-end-column="26" />
-              <folding />
+            <state relative-caret-position="-40">
+              <caret line="144" column="19" lean-forward="false" selection-start-line="144" selection-start-column="19" selection-end-line="144" selection-end-column="19" />
+              <folding>
+                <element signature="e#59#72#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cupid_Stand.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Cupid_Stand.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="_pydev_execfile.py" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -119,16 +136,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="266">
               <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Background.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Background.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -164,7 +171,6 @@
         <option value="$PROJECT_DIR$/Incomplete/Object_Target.py" />
         <option value="$PROJECT_DIR$/MyGame_CupidzArrow.py" />
         <option value="$PROJECT_DIR$/Physics.py" />
-        <option value="$PROJECT_DIR$/ImageDrawTester.py" />
         <option value="$PROJECT_DIR$/Background.py" />
         <option value="$PROJECT_DIR$/Object_ObstacleHill.py" />
         <option value="$PROJECT_DIR$/Object_Target.py" />
@@ -175,6 +181,8 @@
         <option value="$PROJECT_DIR$/Object_Cupid.py" />
         <option value="$PROJECT_DIR$/Object_Arrow.py" />
         <option value="$PROJECT_DIR$/Difficulty_normal.py" />
+        <option value="$PROJECT_DIR$/../2017-2DGP/Labs/Lab09 - Collision Handling/boy.py" />
+        <option value="$PROJECT_DIR$/ImageDrawTester.py" />
       </list>
     </option>
   </component>
@@ -272,7 +280,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.MyGame_CupidzArrow">
+  <component name="RunManager" selected="Python.ImageDrawTester">
     <configuration name="Difficulty_normal" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -367,8 +375,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.MyGame_CupidzArrow" />
-        <item index="1" class="java.lang.String" itemvalue="Python.ImageDrawTester" />
+        <item index="0" class="java.lang.String" itemvalue="Python.ImageDrawTester" />
+        <item index="1" class="java.lang.String" itemvalue="Python.MyGame_CupidzArrow" />
         <item index="2" class="java.lang.String" itemvalue="Python.collision" />
         <item index="3" class="java.lang.String" itemvalue="Python.MyGame" />
         <item index="4" class="java.lang.String" itemvalue="Python.Difficulty_normal" />
@@ -518,14 +526,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../2017-2DGP/Labs/Lab05/grass.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -664,16 +664,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../2017-2DGP/Labs/Lab09 - Collision Handling/boy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-456">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#13#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/State_Title.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -704,16 +694,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../2017-2DGP/Labs/Lab08 - Time/get_frame_time_rate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="62" column="29" lean-forward="true" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
-          <folding>
-            <element signature="e#59#72#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Physics.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -738,14 +718,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Background.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Cupid_Stand.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -755,14 +727,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
           <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ImageDrawTester.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="48" column="18" lean-forward="true" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -796,20 +760,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../2017-2DGP/Labs/Lab09 - Collision Handling/collision.py">
+    <entry file="file://$PROJECT_DIR$/Difficulty_normal.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="25" column="8" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+        <state relative-caret-position="342">
+          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Difficulty_normal.py">
+    <entry file="file://$PROJECT_DIR$/../2017-2DGP/Labs/Lab08 - Time/get_frame_time_rate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-76">
-          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        <state relative-caret-position="-40">
+          <caret line="144" column="19" lean-forward="false" selection-start-line="144" selection-start-column="19" selection-end-line="144" selection-end-column="19" />
           <folding>
-            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#59#72#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../2017-2DGP/Labs/Lab09 - Collision Handling/boy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="72" column="20" lean-forward="false" selection-start-line="72" selection-start-column="20" selection-end-line="72" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Background.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../2017-2DGP/Labs/Lab09 - Collision Handling/collision.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1121">
+          <caret line="66" column="17" lean-forward="true" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ImageDrawTester.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="23" column="35" lean-forward="true" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,55 +1,64 @@
 from pico2d import*
+import time
 
-open_canvas(1500, 750)
+import Object_Cupid
+import Background
+
+'''
+이 py파일은 필기용 / 점검용의 용도를 가지고 있음.
 
 
-global running
+**게임의 정의
+가상 세계(게임 세계) 안에서 존재하는 여러 객체들 간의 상호작용을 시뮬레이션 한 것.
+
+**구성 요소
+
+**객체의 정의
+객체의 속성
+
+**게임 기본 구조
+초기화(initialization)
+
+<게임 루프(반복)>
+게임 로직(Logic) 검사 = 게임 세계의 논리/법칙 적용
+렌더링(Rendering, Drawing) = 게임 세계 구현(
+
+종료(Termination)
+
+'''
 
 
-class Background_Forest:
-    width = 1500
-    height = 750
 
-    def __init__(self):
-        self.x = 750
-        self.y = 375
-        self.image = load_image('Background.png')
-
-    def draw(self):
-        self.image.draw(self.x, self.y)
-
-class Cupid:
-    def __init__(self):
-        self.x = 10
-        self.y = 100
-        self.frame = 0
-        self.image = load_image('Cupid_Stand.png')
-
-    def update(self):
-        self.frame = (self.frame + 1) % 6
-
-    def draw(self):
-        self.image.clip_draw(self.frame*27, 0, 27, 25, self.x, self.y)
-
-def handle_events():
-    global running
-
-    events = get_events()
-    for event in events:
-        if event.type ==  SDL_KEYDOWN:
-            if event.key == SDLK_ESCAPE:
-                running = False
-
-cupid = Cupid()
 running = True
-background = Background_Forest()
+
+def enter(): #Scene 진입
+    pass
+def exit(): #Scene 탈출
+    pass
+def draw(): #Scene Draw
+    pass
+def update(): #Scene Update
+    pass
+def pause(): #Scene Pause
+    pass
+def resume(): #Scene Resume
+    pass
+def handle_events():
+    pass
+
+def Create_World(): #게임세계 창조 :: 객체 정의
+    pass
+
+def Destroy_World(): #게임세계 파괴 :: 컴퓨터 자원 해제
+    pass
+
+######################게임 루프###########################
 
 while (running):
-    handle_events()
-    clear_canvas()
-    background.draw()
-    cupid.draw()
-    cupid.update()
 
+    handle_events()
+
+    clear_canvas()
     update_canvas()
-    delay(0.05)
+
+

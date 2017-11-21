@@ -11,6 +11,7 @@ from Object_ObstacleHill import ObstacleHill
 from Object_Target import Target
 from Object_Arrow import Arrow
 
+
 def create_world(): #세계 생성
     global cupid, background, target, obstaclehill, arrow_number, arrows
     cupid = Cupid()
@@ -27,6 +28,8 @@ def destory_world(): #세계 파괴
     del(obstaclehill)
     del(target)
 
+
+
 def enter():
     close_canvas()
     GameFramework.reset_time()
@@ -35,6 +38,7 @@ def enter():
 
 def exit():
     destory_world()
+
 
 def update(frame_time):
     global cupid, arrows, arrow_number

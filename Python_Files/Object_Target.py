@@ -9,7 +9,7 @@ class Target:
         self.x = 1450
         self.y = 100 + self.height
         if self.image == None:
-            self.image = load_image('Target_TEMP.png')
+            self.image = load_image('Images\Object\Target\Target_TEMP.png')
 
     def draw(self):
         self.image.draw(self.x, self.y)

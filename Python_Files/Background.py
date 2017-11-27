@@ -9,7 +9,7 @@ class Background_Forest:
     def __init__(self):
         self.x = 750
         self.y = 375
-        self.image = load_image('Background.png')
+        self.image = load_image('Images\\Background\\Normal\\background.png')
 
     def draw(self):
         self.image.draw(self.x, self.y)

@@ -16,11 +16,12 @@ class Cupid:
         self.frame = 0
         self.total_frames = 0
         if self.image == None:
-            self.image = load_image('Cupid_Stand.png')
+            self.image = load_image('Images\Object\Character\Cupid_Stand.png')
 
 
     def draw(self):
         self.image.clip_draw(self.frame*27, 0, 27, 25, self.x, self.y)
+        
 
     def update(self, frame_time):
         self.total_frames += Cupid.frame_per_action * Cupid.action_per_time * frame_time

@@ -17,7 +17,7 @@ Main 추가 버튼 요소 (제작 안했음 아직)
 def enter():
     global image
 
-    image = load_image('TestImage_Main.png')
+    image = load_image('Images\Scene\TestImage_Main.png')
 
 def exit():
     global image

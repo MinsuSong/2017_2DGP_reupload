@@ -1,31 +1,22 @@
 from pico2d import*
-
-Pixel_Per_Meter = 10 / 0.1
-
-'''
-1 픽셀 10cm
-10 픽셀 1m
-100 픽셀 10m
-
-정사각형 하나 = 100 x 100
-중력가속도 G = 4.9 m/s^2 (지구 중력의 1/2)
-
-'''
-
-class Vector_Gravity:
-
-    global Pixel_Per_Meter
-
-    def __init__(self):
-        self.x = 0
-        self.y = 0
+import math
 
 
-def Vector_DotProduct(vector_a, vector_b): #내적
-    pass
+def get_mouse_position(event):
+    if (event.type == SDL_MOUSEMOTION):
+        mouse_x = event.x
+        mouse_y = 750-event.y
 
-def Vector_Plus(vector_a, vector_b): #벡터합
-    pass
+    return mouse_x, mouse_y
 
-def Vector_Product(vector_a, vector_b): #벡터곱
-    pass
+
+#1 rad = 57.k degree
+radian = 180 / math.pi
+
+
+
+def get_angle_radian(mouse_x,mouse_y):
+    global radian
+
+    angle = math.atan(mouse_y/mouse_x) * radian
+    return angle

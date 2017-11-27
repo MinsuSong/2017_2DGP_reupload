@@ -27,43 +27,48 @@ v(0)' = v(0) *
 
 '''
 
-
 class Arrow:
     image = None
-
     width = 20 / 2
     height = 20 / 2
-    Pixel_Per_Meter = 10 / 0.1 #픽셀 당 미터 10pixel 당 10cm
 
-    gravity_meter_per_secondSquare = -1 # 4.9m/s^2
-    gravity_pixel_per_secondSquare = gravity_meter_per_secondSquare * Pixel_Per_Meter
+    def __init__(self, angle, power):
+        #위치
+        self.position_X = 50
+        self.position_Y = 100
+        #힘
+        self.power = power
+        #속도
+        self.velocity_X = self.power * 10
+        self.velocity_Y = self.power * 10
+        #가속도
+        self.accelation_X = 0
+        self.accelation_Y = -50
+        #발사각
+        self.angle = angle
+        #파괴용 변수
+        self.destroyflag = False
+        if Arrow.image == None:
+            Arrow.image = load_image('Images\\Object\\Arrow\\Arrow_TEMP.png')
+
+        pass
+
+    def draw(self,frame_time):
+        self.image.draw(self.position_X, self.position_Y)
+
+    def update(self,frame_time):
+        self.velocity_X= self.velocity_X + self.accelation_X * frame_time
+        self.velocity_Y = self.velocity_Y + self.accelation_Y * frame_time
+
+        self.position_X = self.position_X + frame_time * self.velocity_X
+        self.position_Y = self.position_Y + frame_time * self.velocity_Y
 
 
-    velocity_meter_per_second = 1 #초속
-    velocity_pixel_per_second = Pixel_Per_Meter * velocity_meter_per_second
-
-    def __init__(self):
-        self.x = 50
-        self.y = 100 + 25/2
-        self.velocity = self.velocity_pixel_per_second
-        self.image = load_image('Arrow_TEMP.png')
-
-
-    def update(self, frame_time):
-        self.x = self.x + self.velocity * frame_time # 가로방향 등가속도 운동
-        self.y = self.y + self.velocity * frame_time + (1/2 * self.gravity_pixel_per_secondSquare * frame_time)  #포물선
-
-    def draw(self):
-        self.image.draw(self.x, self.y)
+    def destroy(self):
+        pass
 
     def get_bb(self):
-        return self.x - self.width, self.y - self.height, self.x + self.width, self.y + self.height
+        return self.position_X - Arrow.width, self.position_Y - Arrow.height, self.position_X + Arrow.width, self.position_Y + Arrow.height
 
     def draw_bb(self):
         draw_rectangle(*self.get_bb())
-
-    def stop(self):
-        self.velocity = 0
-
-
-

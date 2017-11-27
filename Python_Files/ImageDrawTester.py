@@ -104,7 +104,17 @@ def pause(): #Scene Pause
 def resume(): #Scene Resume
     pass
 def handle_events():
-    pass
+    global running
+    events = get_events()
+    for event in events:
+        if event.type == SDL_KEYDOWN:
+            if event.key == SDL_QUIT:
+                running = False
+            elif event.key == SDLK_ESCAPE:
+                running = False
+
+        else:
+            pass
 
 ########## 해당 Scene에서의 월드 구현 ###########
 

@@ -10,7 +10,7 @@ class ObstacleHill:
         self.x = 750
         self.y = 100 + self.height
         if self.image == None:
-            self.image = load_image('Obstacle_TEMP.png')
+            self.image = load_image('Images\Object\Obstacle\Obstacle_TEMP.png')
 
     def draw(self):
         self.image.draw(self.x, self.y)

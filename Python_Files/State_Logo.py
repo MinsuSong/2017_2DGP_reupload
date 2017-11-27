@@ -10,8 +10,8 @@ logo_time = 0.0
 
 def enter():
     global image
-    open_canvas(sync=True)
-    image = load_image('TestImage_Logo.png')
+    open_canvas()
+    image = load_image('Images\Scene\TestImage_Logo.png')
 
 
 def exit():

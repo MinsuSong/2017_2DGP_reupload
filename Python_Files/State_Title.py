@@ -22,7 +22,7 @@ def handle_events(frame_time):
             if (event.type, event.key) ==  (SDL_KEYDOWN, SDLK_ESCAPE):
                 GameFramework.quit()
             elif (event.type, event.key) == (SDL_KEYDOWN, SDLK_SPACE):
-                GameFramework.change_state(State_Main)
+                GameFramework.push_state(State_Main)
 
 def draw(frame_time):
     global image

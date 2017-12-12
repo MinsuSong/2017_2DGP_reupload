@@ -16,7 +16,6 @@ Main 추가 버튼 요소 (제작 안했음 아직)
 
 def enter():
     global image
-
     image = load_image('Images\Scene\TestImage_Main.png')
 
 def exit():
@@ -30,9 +29,9 @@ def handle_events(frame_time):
             GameFramework.quit()
         else:
             if (event.type, event.key) ==  (SDL_KEYDOWN, SDLK_ESCAPE):
-                GameFramework.change_state(State_Title)
+                GameFramework.push_state(State_Title)
             elif (event.type, event.key) == (SDL_KEYDOWN, SDLK_SPACE):
-                GameFramework.change_state(Difficulty_normal)
+                GameFramework.push_state(Difficulty_normal)
 
 def draw(frame_time):
     global image

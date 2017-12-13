@@ -8,7 +8,7 @@ class Arrow:
     width = 20 / 2
     height = 20 / 2
 
-    def __init__(self, angle, power):
+    def __init__(self, power):
         #위치
         self.position_X = 50
         self.position_Y = 100
@@ -20,10 +20,9 @@ class Arrow:
         #가속도
         self.accelation_X = 0
         self.accelation_Y = -500
-        #파괴용 변수
-        self.destroyflag = False
-        if Arrow.image == None:
-            Arrow.image = load_image('Images\\Object\\Arrow\\Arrow_TEMP.png')
+
+        Arrow.image = load_image('Images\\Object\\Arrow\\Arrow_TEMP.png')
+
         if Arrow.firesound == None:
             Arrow.firesound = load_wav('sound\\sound_shot.wav')
             Arrow.firesound.set_volume(64)

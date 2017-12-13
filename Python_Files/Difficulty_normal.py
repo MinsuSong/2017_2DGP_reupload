@@ -28,22 +28,27 @@ class BGM:
         self.bgm.repeat_play()
 
 def create_world(): #세계 생성
-    global cupid, background, target, obstaclehill, arrowlist,gagelist, life, bgm
+    global cupid, background, target, obstaclehills, arrowlist,gagelist, life, bgm
     cupid = Cupid()
     background = Background_Forest()
     target = Target()
-    obstaclehill = ObstacleHill()
+    obstaclehills = []
+    for i in range(3):
+        obstaclehills.append(ObstacleHill(600))
+        obstaclehills.append(ObstacleHill(750))
+        obstaclehills.append(ObstacleHill(1100))
     arrowlist = []
     gagelist = []
     life = Life()
     bgm = BGM()
 
 def destory_world(): #세계 파괴
-    global cupid, background, target, obstaclehill, arrowlist, gagelist, life
+    global cupid, background, target, obstaclehills, arrowlist, gagelist, life
     del(cupid)
     del(background)
     del(target)
-    del(obstaclehill)
+    for obstaclehill in obstaclehills:
+        del(obstaclehill)
     for arrow in arrowlist:
         del(arrow)
     arrowlist = []
@@ -55,51 +60,57 @@ def exit():
 
 
 def update(frame_time):
-    global cupid, arrowlist, gagelist, power
+    global cupid, arrowlist, gagelist, power, obstaclehills, life
     cupid.update(frame_time)
     for arrow in arrowlist:
         arrow.update(frame_time)
     for gage in gagelist:
         gage.update(frame_time)
 
+    if life.lifepoint == 0:
+        GameFramework.change_state(State_GameOver)
+
+    for obstaclehill in obstaclehills:
+        for arrow in arrowlist:
+
+            if collide(arrow, obstaclehill):
+                arrow.hit()
+                arrowlist.remove(arrow)
+                life.decrease()
+
+            elif collide(arrow, target):
+                GameFramework.change_state(State_Clear)
+
+            elif (arrow.position_Y < 0):
+                arrowlist.remove(arrow)
+
+
 
 
 def draw(frame_time):
-    global cupid, background, obstaclehill, target, arrowlist, gagelist, life
+    global cupid, background, obstaclehills, target, arrowlist, gagelist, life
 
     clear_canvas()
     background.draw()
 
-    for gage in gagelist:
-        gage.draw(frame_time)
-
     target.draw()
     target.draw_bb()
 
-    obstaclehill.draw()
-    obstaclehill.draw_bb()
+    for obstaclehill in obstaclehills:
+        obstaclehill.draw()
+        obstaclehill.draw_bb()
 
     cupid.draw()
     cupid.draw_bb()
+
     life.draw()
+
+    for gage in gagelist:
+        gage.draw(frame_time)
+
     for arrow in arrowlist:
         arrow.draw(frame_time)
         arrow.draw_bb()
-
-
-        if collide(arrow, obstaclehill):
-            arrowlist.remove(arrow)
-            arrow.hit()
-            life.decrease()
-
-            if life.lifepoint == 0:
-                GameFramework.change_state(State_GameOver)
-
-        elif collide(arrow, target):
-            GameFramework.change_state(State_Clear)
-
-        elif (arrow.position_Y < 0 ):
-            arrowlist.remove(arrow)
 
     update_canvas()
 
@@ -131,7 +142,7 @@ def handle_events(frame_time):
                 if event.button == SDL_BUTTON_LEFT:
 
                     power = gage.level
-                    arrow = Arrow(None, gage.level)
+                    arrow = Arrow(gage.level)
                     arrowlist.append(arrow)
                     arrow.firearrow()
                     gagelist.remove(gagelist[-1])

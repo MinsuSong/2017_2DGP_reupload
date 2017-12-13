@@ -20,7 +20,6 @@ def enter():
 
 def exit():
     global image
-    del(image)
 
 def handle_events(frame_time):
     events = get_events()
@@ -31,7 +30,7 @@ def handle_events(frame_time):
             if (event.type, event.key) ==  (SDL_KEYDOWN, SDLK_ESCAPE):
                 GameFramework.push_state(State_Title)
             elif (event.type, event.key) == (SDL_KEYDOWN, SDLK_SPACE):
-                GameFramework.push_state(Difficulty_normal)
+                GameFramework.change_state(Difficulty_normal)
 
 def draw(frame_time):
     global image

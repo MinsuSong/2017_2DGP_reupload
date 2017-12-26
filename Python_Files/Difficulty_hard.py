@@ -22,6 +22,7 @@ from UI_PowerGage import Gage                   # 파워게이지
 
 from UI_lifeHard import Life                    # 라이프
 
+from Object_Cloud import Cloud                  # 구름
 
 
 
@@ -46,7 +47,7 @@ class BGM:
 
 def create_world(): #세계 생성
     global cupid, target, obstaclehills, arrowlist,gagelist, life, bgm # 수정요함
-    global camera, backgroundbig, fire_possible_flag
+    global camera, backgroundbig, fire_possible_flag, cloudlist
 
     camera = Camera()
     backgroundbig = BackgroundBig()
@@ -54,6 +55,8 @@ def create_world(): #세계 생성
     cupid = Cupid()
     target = Target()
     fire_possible_flag = True
+
+    cloudlist = [Cloud() for i in range(5)]
 
     ### 장애물 위치 ###
 
@@ -95,7 +98,7 @@ def exit():
 
 def update(frame_time):
     global cupid, obstaclehills, life, target
-    global arrowlist, gagelist, fire_possible_flag, camera, backgroundbig
+    global arrowlist, gagelist, fire_possible_flag, camera, backgroundbig, cloudlist
 
     backgroundbig.update(frame_time)
     cupid.update(frame_time)
@@ -111,6 +114,9 @@ def update(frame_time):
             arrowlist.remove(arrow)
             camera.mapcamera_flag = True
             fire_possible_flag = True
+
+    for cloud in cloudlist:
+        cloud.update(frame_time)
 
 
 
@@ -133,6 +139,16 @@ def update(frame_time):
             elif (arrow.position_Y < 0):
                 arrowlist.remove(arrow)
 
+    for cloud in cloudlist:
+        for arrow in arrowlist:
+
+            if collide(arrow, cloud):
+                arrow.hit()
+                arrowlist.remove(arrow)
+                camera.mapcamera_flag = True
+                fire_possible_flag = True
+                life.decrease()
+
     for gage in gagelist:
         gage.update(frame_time)
 
@@ -143,6 +159,7 @@ def draw(frame_time):
     global cupid, background, obstaclehills, target, arrowlist, gagelist, life #수정요함
 
     global backgroundbig, camera
+    global cloud
     clear_canvas()
 
     camera.update(frame_time)
@@ -154,6 +171,10 @@ def draw(frame_time):
         obstaclehill.draw()
 
     cupid.draw()
+
+    #########################################################
+    for cloud in cloudlist:
+        cloud.draw()
 
     life.draw()
 
@@ -235,12 +256,16 @@ def collide(a, b):
 
 def set_scrolling():
     global camera, backgroundbig, target, cupid, obstaclehills
+    global cloudlist
     camera.set_background(backgroundbig)  # 카메라 고정
     backgroundbig.set_camera(camera)  # 맵에 카메라 고정
     target.set_background(backgroundbig)  # 타겟 고정
     cupid.set_background(backgroundbig)  # 큐피드 고정
     for obstaclehill in obstaclehills:
         obstaclehill.set_background(backgroundbig)
+
+    for cloud in cloudlist:
+        cloud.set_background(backgroundbig)
 
 def resume():
     pass

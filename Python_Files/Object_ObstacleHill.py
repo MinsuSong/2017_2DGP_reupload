@@ -4,7 +4,7 @@ import random
 class ObstacleHill:
     image = None
 
-    width = 60 / 2
+    width = 100 / 2
     height = 200 / 2
 
 
@@ -19,7 +19,3 @@ class ObstacleHill:
 
     def get_bb(self):
         return self.x - self.width, self.y - self.height, self.x + self.width, self.y + self.height
-
-    def draw_bb(self):
-        draw_rectangle(*self.get_bb())
-

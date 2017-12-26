@@ -14,8 +14,7 @@ class Target:
     def draw(self):
         self.image.draw(self.x, self.y)
 
+
     def get_bb(self):
         return self.x - self.width, self.y - self.height, self.x + self.width, self.y + self.height
 
-    def draw_bb(self):
-        draw_rectangle(*self.get_bb())

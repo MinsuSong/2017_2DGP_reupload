@@ -10,8 +10,7 @@ def enter():
     image = load_image('Images\Scene\TestImage_Title.png')
 
 def exit():
-    global image
-    del(image)
+    pass
 
 def handle_events(frame_time):
     events = get_events()

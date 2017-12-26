@@ -87,11 +87,12 @@ def run(State_Logo):
 
     while (running):
         frame_time = time.clock() - current_time
-        current_time += frame_time
+
 
         stack[-1].handle_events(frame_time)
         stack[-1].update(frame_time)
         stack[-1].draw(frame_time)
+        current_time += frame_time
     # repeatedly delete the top of the stack
     while (len(stack) > 0):
         stack[-1].exit()

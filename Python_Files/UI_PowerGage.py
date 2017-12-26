@@ -1,6 +1,6 @@
 from pico2d import*
 import time
-open_canvas()
+
 
 gage = None
 

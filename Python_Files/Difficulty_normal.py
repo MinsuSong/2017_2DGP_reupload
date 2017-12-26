@@ -23,7 +23,7 @@ def enter():
 
 class BGM:
     def __init__(self):
-        self.bgm = load_music('sound\\background.mp3')
+        self.bgm = load_music('sound\\Normal.mp3')
         self.bgm.set_volume(64)
         self.bgm.repeat_play()
 
@@ -60,7 +60,7 @@ def exit():
 
 
 def update(frame_time):
-    global cupid, arrowlist, gagelist, power, obstaclehills, life
+    global cupid, arrowlist, gagelist, obstaclehills, life
     cupid.update(frame_time)
     for arrow in arrowlist:
         arrow.update(frame_time)
@@ -81,7 +81,7 @@ def update(frame_time):
             elif collide(arrow, target):
                 GameFramework.change_state(State_Clear)
 
-            elif (arrow.position_Y < 0):
+            elif (arrow.position_Y < 80):
                 arrowlist.remove(arrow)
 
 
@@ -94,14 +94,11 @@ def draw(frame_time):
     background.draw()
 
     target.draw()
-    target.draw_bb()
 
     for obstaclehill in obstaclehills:
         obstaclehill.draw()
-        obstaclehill.draw_bb()
 
     cupid.draw()
-    cupid.draw_bb()
 
     life.draw()
 
@@ -110,14 +107,13 @@ def draw(frame_time):
 
     for arrow in arrowlist:
         arrow.draw(frame_time)
-        arrow.draw_bb()
 
     update_canvas()
 
 
 
 def handle_events(frame_time):
-    global arrowlist, gagelist, mouse_x,mouse_y, power, gage
+    global arrowlist, gagelist, mouse_x,mouse_y, gage
     events = get_events()
     for event in events:
         if event.type == SDL_QUIT:
@@ -141,7 +137,6 @@ def handle_events(frame_time):
             elif event.type == SDL_MOUSEBUTTONUP:
                 if event.button == SDL_BUTTON_LEFT:
 
-                    power = gage.level
                     arrow = Arrow(gage.level)
                     arrowlist.append(arrow)
                     arrow.firearrow()
@@ -150,10 +145,6 @@ def handle_events(frame_time):
 def collide(a, b):
     left_a, bottom_a, right_a, top_a = a.get_bb()
     left_b, bottom_b, right_b, top_b = b.get_bb()
-
-    #충돌이 없는 경우를 비교하는 것은?
-    #충돌이 일어나지 않는 경우가 더 많기 때문에.
-
 
     if left_a > right_b: return False
     if right_a < left_b: return False

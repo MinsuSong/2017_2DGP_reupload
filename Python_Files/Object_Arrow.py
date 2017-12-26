@@ -10,8 +10,8 @@ class Arrow:
 
     def __init__(self, power):
         #위치
-        self.position_X = 50
-        self.position_Y = 100
+        self.position_X = 60
+        self.position_Y = 125
         #힘
         self.power = power
         #속도
@@ -26,10 +26,13 @@ class Arrow:
         if Arrow.firesound == None:
             Arrow.firesound = load_wav('sound\\sound_shot.wav')
             Arrow.firesound.set_volume(64)
+
+
         if Arrow.hitsound == None:
             Arrow.hitsound = load_wav('sound\\sound_hit.wav')
             Arrow.hitsound.set_volume(64)
         pass
+
 
     def draw(self,frame_time):
         self.image.draw(self.position_X, self.position_Y)
